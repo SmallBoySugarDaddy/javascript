@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>forms tutorials</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      input {
+        margin: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <span id="header">Some header</span>
+      </div>
+      <form action="" method="" id="form">
+        <label for="name">Name</label>
+        <input type="text" id="name" autocomplete autofocus name="name" />
+        <label for="age">Age</label>
+        <input tpe="number" name="age" />
+        <label for="description">Description</label>
+        <textarea
+          name="description"
+          id="description"
+          cols="60"
+          rows="2"
+        ></textarea>
+        <button onclick="clickedMe()" type="button">submit</button>
+        <input type="reset" name="reset" value="reset" />
+      </form>
+    </div>
+    <script type="text/javascript">
+      document.getElementById("form").style.background = "black";
+
+      setTimeout(() => {
+        document.getElementById("form").setAttribute("autocomplete", "off");
+      }, 2000);
+      function processingHandler() {
+        alert("we are processing your info");
+      }
+
+      function clickedMe() {
+        document
+          .getElementById("form")
+          .addEventListener("click", processingHandler, false);
+      }
+    </script>
+  </body>
+</html>

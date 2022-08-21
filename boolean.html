@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="username"></div>
+
+    <script type="text/javascript">
+      const checkName = (username) => {
+        const splited = username.split(" ");
+        console.log(splited);
+        if (splited.length > 1) {
+          return true;
+        }
+        return false;
+      };
+      document.getElementById("username").innerHTML = checkName("Essuman Kobe")
+        ? "True"
+        : "False";
+    </script>
+  </body>
+</html>

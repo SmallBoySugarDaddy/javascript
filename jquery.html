@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <p
+      class="test1"
+      style="background-color: red; color: white; margin: 3em; padding: 2em"
+    >
+      This is a paragraph
+    </p>
+    <p
+      class="test2"
+      style="background-color: red; color: white; margin: 3em; padding: 2em"
+    >
+      This is a paragraph
+    </p>
+
+    <script src="./jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("p").click(function () {
+          for (let i = 0; i < 5; i++) {
+            if (i % 2 == 0) {
+              $("p.test1").css("background", "yellow");
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="mydiv"></div>
+
+    <script type="text/javascript">
+      const returnAge = (age) => {
+        return age;
+      };
+      const returnAge1 = function (age) {
+        return age;
+      };
+      function returnAge2(age) {
+        return age;
+      }
+      const nopara = () => {
+        const pi = 3.14;
+        console.log(pi * 2 * 2);
+        return pi;
+      };
+
+      const add = function (firstNumber, secondNumber) {
+        return firstNumber + secondNumber;
+      };
+
+      //Array
+
+      let numbers = [30, 60, 190];
+      let result = true;
+      for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] >= 100) {
+          result = false;
+          break;
+        }
+      }
+
+      function arrayAdder(a) {
+        let sum = 0;
+        for (let i = 0; i < a.length; i++) {
+          sum = sum + a[i];
+        }
+        return sum;
+      }
+
+      function arraySquarer(a = []) {
+        let squaredArray = [];
+        for (let i = 0; i < a.length; i++) {
+          squaredArray.push(Math.pow(a[i], 2));
+        }
+        return squaredArray;
+      }
+      console.log(arraySquarer([1, 2, 3, 4, 5]));
+
+      console.log(arrayAdder([4, 5, 23, 56, 5, 6, 21, 8, 9, 8, 70, 49, 76]));
+      console.log(result);
+      // Array end
+
+      //objects
+
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+      document.getElementById("mydiv").innerHTML =
+        person.firstName +
+        " " +
+        person.lastName +
+        " is " +
+        person.age +
+        " years old.";
+
+      //end of objects
+
+      console.log(add(24, 58));
+      console.log(nopara());
+    </script>
+  </body>
+</html>

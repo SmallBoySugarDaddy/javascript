@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+
+        <div id="obj"></div>
+
+        <script type="text/javascript">
+            const Student = {
+                age:0,
+                name:'',
+                gender:'',
+                setProperties:(age,name,gender)=>{
+                    Student.age = age
+                    Student.name = name
+                    Student.gender = gender
+                },
+                getAge:()=>{
+                    return Student.age<1 ? Student.age : Student.age - 4;
+                }
+            };
+            Student.setProperties(34,'Kofi','M')
+           document.getElementById('obj').innerHTML = `${parseInt("5464")} is the football age`
+
+
+        </script>
+    </body>
+</html>

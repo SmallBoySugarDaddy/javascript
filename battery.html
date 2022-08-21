@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body{
+            background-color: white;
+        }
+        .battery-icon {
+            border: 5px solid black;
+            border-radius: 10px;
+            height: 60px;
+            position: relative;
+            width: 200px;
+
+        }
+
+        .battery-icon::after {
+            content: '';
+            background: black;
+            border-radius: 5px;
+            height: 30px;
+            width:15px ;
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .battery-icon::before {
+            content: '';
+            animation: fill 3s linear infinite;
+            background-color:red;
+            border-radius: 5px;
+            height: 52px;
+            width: 3%;
+            position: absolute;
+            left: 4px;
+            top: 4px;
+        }
+
+        @keyframes fill{
+            0%{
+                width:0%;
+                background-color:red;
+            }
+            70%{
+                width:70%;
+                background-color: yellow;
+            }
+            90%{
+                width:90%;
+                background-color:green;
+            }
+            100%{
+                width: 100%;
+                background-color: green;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="battery-icon"></div>
+    <p style="font-family: arial; color:red;">Battery charging</p>
+    
+</body>
+
+</html>

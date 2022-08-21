@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About functions</title>
+</head>
+
+<body>
+
+
+    <div id="mydiv"></div>
+
+    <script type="text/javascript">
+        const Student = {
+            name: "Ali",
+            age: 34,
+            getStudentInfo: () => {
+                return `The name is ${Student.name} and the age is ${Student.age}`
+            }
+        }
+        Student.height = "234cm"
+        Student.getName = function () {
+            return this.name
+        }
+        Student.getAge = () => {
+
+            return Student.age - 10
+        }
+        document.getElementById('mydiv').innerHTML = `<span style="background:red;color:white;font-size:20;font-weight:400;">` + Student.getStudentInfo() + `</span`
+        document.getElementById('mydiv').addEventListener('click', () => {
+            console.log(this.frames.innerHeight)
+        })
+
+    </script>
+</body>
+
+</html>

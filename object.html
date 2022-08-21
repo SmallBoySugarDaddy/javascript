@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="obj"></div>
+
+    <script type="text/javascript">
+      const student = {
+        age: 0,
+        name: "",
+        gender: "",
+        setProperties: (age, name, gender) => {
+          student.age = age;
+          student.name = name;
+          student.gender = gender;
+        },
+        getAge: () => {
+          return student.age < 1 ? student.age : student.age - 4;
+        },
+      };
+      student.setProperties(34, "kofi", "M");
+      document.getElementById("obj").innerHTML = student.getAge();
+    </script>
+  </body>
+</html>
